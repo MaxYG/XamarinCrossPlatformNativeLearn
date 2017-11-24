@@ -1,0 +1,12 @@
+/.vs
+
+/XamarinCrossPlatformNative/XamarinCrossPlatformNative/obj
+/XamarinCrossPlatformNative/XamarinCrossPlatformNative/bin
+/XamarinCrossPlatformNative/XamarinCrossPlatformNative.Android/obj
+/XamarinCrossPlatformNative/XamarinCrossPlatformNative.Android/bin
+
+/XamarinCrossPlatformNative/XamarinCrossPlatformNative.iOS/bin
+/XamarinCrossPlatformNative/XamarinCrossPlatformNative.iOS/obj
+
+/XamarinCrossPlatformNative/XamarinCrossPlatformNative.UWP/obj
+/XamarinCrossPlatformNative/XamarinCrossPlatformNative.UWP/bin
