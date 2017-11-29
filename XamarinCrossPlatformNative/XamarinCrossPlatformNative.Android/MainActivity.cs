@@ -1,33 +1,35 @@
 ﻿using System;
-
+using System.Collections.Generic;
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using XamarinCrossPlatformNative.Droid.Adapter;
+using XamarinCrossPlatformNative.Droid.Model;
 
 namespace XamarinCrossPlatformNative.Droid
 {
 	[Activity (Label = "XamarinCrossPlatformNative.Android", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
-		int count = 1;
-
+		
+        List<ColorItem> colorItems=new List<ColorItem>();
+	    private ListView listView;
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
-			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
-			// Get our button from the layout resource,
-			// and attach an event to it
-			Button button = FindViewById<Button> (Resource.Id.myButton);
-			
-			button.Click += delegate {
-				button.Text = string.Format ("{0} clicks!", count++);
-			};
+		    listView = FindViewById<ListView>(Resource.Id.myListView);
+
+            colorItems.Add(new ColorItem(){Color = Color.DarkRed,ColorName = "Dark red",Code = "8B0000"});
+            colorItems.Add(new ColorItem(){Color = Color.SlateBlue,ColorName = "slate blue",Code = "6A5ACD"});
+            colorItems.Add(new ColorItem(){Color = Color.ForestGreen,ColorName = "forest green",Code = "228B22"});
+            listView.Adapter=new ColorAdapter(this,colorItems);
 		}
 	}
 }
