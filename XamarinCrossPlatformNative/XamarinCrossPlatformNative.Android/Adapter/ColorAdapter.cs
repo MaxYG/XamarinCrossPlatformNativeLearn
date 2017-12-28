@@ -17,6 +17,7 @@ namespace XamarinCrossPlatformNative.Droid.Adapter
     {
         private List<ColorItem> items;
         private Activity activityContext;
+        private Context context;
 
         public ColorAdapter(Activity activityContext,List<ColorItem> items):base()
         {
