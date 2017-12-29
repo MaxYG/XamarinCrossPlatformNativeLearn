@@ -1639,49 +1639,67 @@ namespace XamarinCrossPlatformNative.Droid
 			public const int abc_vector_test = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int Icon = 2130837587;
+			public const int ic_action_content_create = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int notification_action_background = 2130837588;
+			public const int ic_action_content_save = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int notification_bg = 2130837589;
+			public const int ic_menu_copy_holo_dark = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public const int notification_bg_low = 2130837590;
+			public const int ic_menu_cut_holo_dark = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int notification_bg_low_normal = 2130837591;
+			public const int ic_menu_paste_holo_dark = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int notification_bg_low_pressed = 2130837592;
+			public const int ic_menu_search_holo_dark = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int notification_bg_normal = 2130837593;
+			public const int Icon = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int notification_bg_normal_pressed = 2130837594;
+			public const int notification_action_background = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int notification_icon_background = 2130837595;
-			
-			// aapt resource value: 0x7f020060
-			public const int notification_template_icon_bg = 2130837600;
-			
-			// aapt resource value: 0x7f020061
-			public const int notification_template_icon_low_bg = 2130837601;
+			public const int notification_bg = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int notification_tile_bg = 2130837596;
+			public const int notification_bg_low = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int notify_panel_notification_icon_bg = 2130837597;
+			public const int notification_bg_low_normal = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int splash_logo = 2130837598;
+			public const int notification_bg_low_pressed = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int splash_screen = 2130837599;
+			public const int notification_bg_normal = 2130837599;
+			
+			// aapt resource value: 0x7f020060
+			public const int notification_bg_normal_pressed = 2130837600;
+			
+			// aapt resource value: 0x7f020061
+			public const int notification_icon_background = 2130837601;
+			
+			// aapt resource value: 0x7f020066
+			public const int notification_template_icon_bg = 2130837606;
+			
+			// aapt resource value: 0x7f020067
+			public const int notification_template_icon_low_bg = 2130837607;
+			
+			// aapt resource value: 0x7f020062
+			public const int notification_tile_bg = 2130837602;
+			
+			// aapt resource value: 0x7f020063
+			public const int notify_panel_notification_icon_bg = 2130837603;
+			
+			// aapt resource value: 0x7f020064
+			public const int splash_logo = 2130837604;
+			
+			// aapt resource value: 0x7f020065
+			public const int splash_screen = 2130837605;
 			
 			static Drawable()
 			{
@@ -1696,8 +1714,11 @@ namespace XamarinCrossPlatformNative.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0a005e
-			public const int action0 = 2131361886;
+			// aapt resource value: 0x7f0a005b
+			public const int MyButton = 2131361883;
+			
+			// aapt resource value: 0x7f0a005f
+			public const int action0 = 2131361887;
 			
 			// aapt resource value: 0x7f0a0047
 			public const int action_bar = 2131361863;
@@ -1720,17 +1741,17 @@ namespace XamarinCrossPlatformNative.Droid
 			// aapt resource value: 0x7f0a0024
 			public const int action_bar_title = 2131361828;
 			
-			// aapt resource value: 0x7f0a005b
-			public const int action_container = 2131361883;
+			// aapt resource value: 0x7f0a005c
+			public const int action_container = 2131361884;
 			
 			// aapt resource value: 0x7f0a0048
 			public const int action_context_bar = 2131361864;
 			
-			// aapt resource value: 0x7f0a0062
-			public const int action_divider = 2131361890;
+			// aapt resource value: 0x7f0a0063
+			public const int action_divider = 2131361891;
 			
-			// aapt resource value: 0x7f0a005c
-			public const int action_image = 2131361884;
+			// aapt resource value: 0x7f0a005d
+			public const int action_image = 2131361885;
 			
 			// aapt resource value: 0x7f0a0002
 			public const int action_menu_divider = 2131361794;
@@ -1747,11 +1768,11 @@ namespace XamarinCrossPlatformNative.Droid
 			// aapt resource value: 0x7f0a0026
 			public const int action_mode_close_button = 2131361830;
 			
-			// aapt resource value: 0x7f0a005d
-			public const int action_text = 2131361885;
+			// aapt resource value: 0x7f0a005e
+			public const int action_text = 2131361886;
 			
-			// aapt resource value: 0x7f0a006b
-			public const int actions = 2131361899;
+			// aapt resource value: 0x7f0a006c
+			public const int actions = 2131361900;
 			
 			// aapt resource value: 0x7f0a0027
 			public const int activity_chooser_view_content = 2131361831;
@@ -1774,14 +1795,14 @@ namespace XamarinCrossPlatformNative.Droid
 			// aapt resource value: 0x7f0a002e
 			public const int buttonPanel = 2131361838;
 			
-			// aapt resource value: 0x7f0a005f
-			public const int cancel_action = 2131361887;
+			// aapt resource value: 0x7f0a0060
+			public const int cancel_action = 2131361888;
 			
 			// aapt resource value: 0x7f0a003e
 			public const int checkbox = 2131361854;
 			
-			// aapt resource value: 0x7f0a0067
-			public const int chronometer = 2131361895;
+			// aapt resource value: 0x7f0a0068
+			public const int chronometer = 2131361896;
 			
 			// aapt resource value: 0x7f0a001e
 			public const int collapseActionView = 2131361822;
@@ -1810,8 +1831,8 @@ namespace XamarinCrossPlatformNative.Droid
 			// aapt resource value: 0x7f0a001b
 			public const int end = 2131361819;
 			
-			// aapt resource value: 0x7f0a0071
-			public const int end_padder = 2131361905;
+			// aapt resource value: 0x7f0a0072
+			public const int end_padder = 2131361906;
 			
 			// aapt resource value: 0x7f0a0028
 			public const int expand_activities_button = 2131361832;
@@ -1828,8 +1849,8 @@ namespace XamarinCrossPlatformNative.Droid
 			// aapt resource value: 0x7f0a002c
 			public const int icon = 2131361836;
 			
-			// aapt resource value: 0x7f0a006c
-			public const int icon_group = 2131361900;
+			// aapt resource value: 0x7f0a006d
+			public const int icon_group = 2131361901;
 			
 			// aapt resource value: 0x7f0a001f
 			public const int ifRoom = 2131361823;
@@ -1840,14 +1861,14 @@ namespace XamarinCrossPlatformNative.Droid
 			// aapt resource value: 0x7f0a0056
 			public const int imageView1 = 2131361878;
 			
-			// aapt resource value: 0x7f0a0068
-			public const int info = 2131361896;
+			// aapt resource value: 0x7f0a0069
+			public const int info = 2131361897;
 			
-			// aapt resource value: 0x7f0a006d
-			public const int line1 = 2131361901;
+			// aapt resource value: 0x7f0a006e
+			public const int line1 = 2131361902;
 			
-			// aapt resource value: 0x7f0a006f
-			public const int line3 = 2131361903;
+			// aapt resource value: 0x7f0a0070
+			public const int line3 = 2131361904;
 			
 			// aapt resource value: 0x7f0a0057
 			public const int linearLayout1 = 2131361879;
@@ -1858,17 +1879,14 @@ namespace XamarinCrossPlatformNative.Droid
 			// aapt resource value: 0x7f0a002b
 			public const int list_item = 2131361835;
 			
-			// aapt resource value: 0x7f0a0061
-			public const int media_actions = 2131361889;
+			// aapt resource value: 0x7f0a0062
+			public const int media_actions = 2131361890;
 			
 			// aapt resource value: 0x7f0a001c
 			public const int middle = 2131361820;
 			
 			// aapt resource value: 0x7f0a0013
 			public const int multiply = 2131361811;
-			
-			// aapt resource value: 0x7f0a005a
-			public const int myListView = 2131361882;
 			
 			// aapt resource value: 0x7f0a0020
 			public const int never = 2131361824;
@@ -1879,14 +1897,14 @@ namespace XamarinCrossPlatformNative.Droid
 			// aapt resource value: 0x7f0a000a
 			public const int normal = 2131361802;
 			
-			// aapt resource value: 0x7f0a006a
-			public const int notification_background = 2131361898;
+			// aapt resource value: 0x7f0a006b
+			public const int notification_background = 2131361899;
+			
+			// aapt resource value: 0x7f0a0065
+			public const int notification_main_column = 2131361893;
 			
 			// aapt resource value: 0x7f0a0064
-			public const int notification_main_column = 2131361892;
-			
-			// aapt resource value: 0x7f0a0063
-			public const int notification_main_column_container = 2131361891;
+			public const int notification_main_column_container = 2131361892;
 			
 			// aapt resource value: 0x7f0a0030
 			public const int parentPanel = 2131361840;
@@ -1900,11 +1918,11 @@ namespace XamarinCrossPlatformNative.Droid
 			// aapt resource value: 0x7f0a0040
 			public const int radio = 2131361856;
 			
-			// aapt resource value: 0x7f0a0069
-			public const int right_icon = 2131361897;
+			// aapt resource value: 0x7f0a006a
+			public const int right_icon = 2131361898;
 			
-			// aapt resource value: 0x7f0a0065
-			public const int right_side = 2131361893;
+			// aapt resource value: 0x7f0a0066
+			public const int right_side = 2131361894;
 			
 			// aapt resource value: 0x7f0a0014
 			public const int screen = 2131361812;
@@ -1978,8 +1996,8 @@ namespace XamarinCrossPlatformNative.Droid
 			// aapt resource value: 0x7f0a0017
 			public const int src_over = 2131361815;
 			
-			// aapt resource value: 0x7f0a0060
-			public const int status_bar_latest_event_content = 2131361888;
+			// aapt resource value: 0x7f0a0061
+			public const int status_bar_latest_event_content = 2131361889;
 			
 			// aapt resource value: 0x7f0a0041
 			public const int submenuarrow = 2131361857;
@@ -1990,11 +2008,11 @@ namespace XamarinCrossPlatformNative.Droid
 			// aapt resource value: 0x7f0a000b
 			public const int tabMode = 2131361803;
 			
-			// aapt resource value: 0x7f0a0070
-			public const int text = 2131361904;
+			// aapt resource value: 0x7f0a0071
+			public const int text = 2131361905;
 			
-			// aapt resource value: 0x7f0a006e
-			public const int text2 = 2131361902;
+			// aapt resource value: 0x7f0a006f
+			public const int text2 = 2131361903;
 			
 			// aapt resource value: 0x7f0a0035
 			public const int textSpacerNoButtons = 2131361845;
@@ -2008,8 +2026,8 @@ namespace XamarinCrossPlatformNative.Droid
 			// aapt resource value: 0x7f0a0059
 			public const int textView2 = 2131361881;
 			
-			// aapt resource value: 0x7f0a0066
-			public const int time = 2131361894;
+			// aapt resource value: 0x7f0a0067
+			public const int time = 2131361895;
 			
 			// aapt resource value: 0x7f0a002d
 			public const int title = 2131361837;
@@ -2019,6 +2037,9 @@ namespace XamarinCrossPlatformNative.Droid
 			
 			// aapt resource value: 0x7f0a003a
 			public const int title_template = 2131361850;
+			
+			// aapt resource value: 0x7f0a005a
+			public const int toolbar = 2131361882;
 			
 			// aapt resource value: 0x7f0a0023
 			public const int top = 2131361827;
@@ -2220,6 +2241,9 @@ namespace XamarinCrossPlatformNative.Droid
 			// aapt resource value: 0x7f03002f
 			public const int support_simple_spinner_dropdown_item = 2130903087;
 			
+			// aapt resource value: 0x7f030030
+			public const int toolbar = 2130903088;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -2337,6 +2361,9 @@ namespace XamarinCrossPlatformNative.Droid
 			
 			// aapt resource value: 0x7f050014
 			public const int status_bar_notification_info_overflow = 2131034132;
+			
+			// aapt resource value: 0x7f050023
+			public const int toolbar_name = 2131034147;
 			
 			static String()
 			{
@@ -2827,6 +2854,9 @@ namespace XamarinCrossPlatformNative.Droid
 			
 			// aapt resource value: 0x7f07015f
 			public const int MyTheme_Splash = 2131165535;
+			
+			// aapt resource value: 0x7f070160
+			public const int MyToolBarTheme = 2131165536;
 			
 			// aapt resource value: 0x7f07001e
 			public const int Platform_AppCompat = 2131165214;
