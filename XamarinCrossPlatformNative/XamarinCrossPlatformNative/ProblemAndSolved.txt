@@ -1,0 +1,18 @@
+﻿
+
+1.splash activity: nuget Xamarin.Android.Support.v4 and Xamarin.Android.Support.v7.AppCompat must patch mono.android,
+ Mono.Android is in F:\setupfile\vs2017\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v7.1\Mono.Android.dll.
+ it is v7.1 version. but new mono.android version is 8.0, so can't install into android project, must drop the v4 and 
+ v7 version.
+
+1.1 Java.Lang.IllegalStateException: You need to use a Theme.AppCompat theme (or descendant) with this activity. occurred
+theme use default.  MainActivity : Activity, MainActivity : AppCompatActivity will throw this error.
+
+2.how to update mono.andriod version.
+
+3.The "ResolveLibraryProjectImports" task failed unexpectedly. System.IO.PathTooLongException: The specified path, 
+ file name, or both are too long. 
+The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters.
+
+project name is too long.
+

@@ -7,14 +7,15 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Support.V7.App;
 using XamarinCrossPlatformNative.Droid.Adapter;
 using XamarinCrossPlatformNative.Droid.Model;
 
 namespace XamarinCrossPlatformNative.Droid
 {
-	[Activity (Label = "XamarinCrossPlatformNative.Android", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "Android1", Icon = "@drawable/icon")]
 	public class MainActivity : Activity
-	{
+    {
 		
         List<ColorItem> colorItems=new List<ColorItem>();
 	    private ListView listView;

@@ -2158,7 +2158,7 @@
           "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets": {}
         }
       },
-      "XamarinCrossPlatformNative/1.0.0": {
+      "XCPN/1.0.0": {
         "type": "project"
       }
     },
@@ -4427,7 +4427,7 @@
           "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets": {}
         }
       },
-      "XamarinCrossPlatformNative/1.0.0": {
+      "XCPN/1.0.0": {
         "type": "project"
       }
     },
@@ -6732,7 +6732,7 @@
           "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets": {}
         }
       },
-      "XamarinCrossPlatformNative/1.0.0": {
+      "XCPN/1.0.0": {
         "type": "project"
       }
     },
@@ -9010,7 +9010,7 @@
           "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets": {}
         }
       },
-      "XamarinCrossPlatformNative/1.0.0": {
+      "XCPN/1.0.0": {
         "type": "project"
       }
     },
@@ -11324,7 +11324,7 @@
           "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets": {}
         }
       },
-      "XamarinCrossPlatformNative/1.0.0": {
+      "XCPN/1.0.0": {
         "type": "project"
       }
     },
@@ -13602,7 +13602,7 @@
           "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets": {}
         }
       },
-      "XamarinCrossPlatformNative/1.0.0": {
+      "XCPN/1.0.0": {
         "type": "project"
       }
     },
@@ -15916,7 +15916,7 @@
           "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets": {}
         }
       },
-      "XamarinCrossPlatformNative/1.0.0": {
+      "XCPN/1.0.0": {
         "type": "project"
       }
     }
@@ -22251,10 +22251,10 @@
         "xamarin.forms.nuspec"
       ]
     },
-    "XamarinCrossPlatformNative/1.0.0": {
+    "XCPN/1.0.0": {
       "type": "project",
-      "path": "../XamarinCrossPlatformNative/XamarinCrossPlatformNative.csproj",
-      "msbuildProject": "../XamarinCrossPlatformNative/XamarinCrossPlatformNative.csproj"
+      "path": "../XamarinCrossPlatformNative/XCPN.csproj",
+      "msbuildProject": "../XamarinCrossPlatformNative/XCPN.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -22269,12 +22269,12 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "D:\\study\\XamarinDemo\\XamarinCrossPlatformNativeLearn\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative.UWP\\XamarinCrossPlatformNative.UWP.csproj",
-      "projectName": "XamarinCrossPlatformNative.UWP",
-      "projectPath": "D:\\study\\XamarinDemo\\XamarinCrossPlatformNativeLearn\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative.UWP\\XamarinCrossPlatformNative.UWP.csproj",
-      "projectJsonPath": "D:\\study\\XamarinDemo\\XamarinCrossPlatformNativeLearn\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative.UWP\\project.json",
+      "projectUniqueName": "D:\\study\\XamarinDemo\\XCPNLearn\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative.UWP\\XCPN.UWP.csproj",
+      "projectName": "XCPN.UWP",
+      "projectPath": "D:\\study\\XamarinDemo\\XCPNLearn\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative.UWP\\XCPN.UWP.csproj",
+      "projectJsonPath": "D:\\study\\XamarinDemo\\XCPNLearn\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative.UWP\\project.json",
       "packagesPath": "C:\\Users\\yg\\.nuget\\packages\\",
-      "outputPath": "D:\\study\\XamarinDemo\\XamarinCrossPlatformNativeLearn\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative.UWP\\obj\\",
+      "outputPath": "D:\\study\\XamarinDemo\\XCPNLearn\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative.UWP\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
         "C:\\Users\\yg\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22287,8 +22287,8 @@
       "frameworks": {
         "uap10.0.10586": {
           "projectReferences": {
-            "D:\\study\\XamarinDemo\\XamarinCrossPlatformNativeLearn\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative.csproj": {
-              "projectPath": "D:\\study\\XamarinDemo\\XamarinCrossPlatformNativeLearn\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative.csproj"
+            "D:\\study\\XamarinDemo\\XCPNLearn\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative\\XCPN.csproj": {
+              "projectPath": "D:\\study\\XamarinDemo\\XCPNLearn\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative\\XCPN.csproj"
             }
           }
         }

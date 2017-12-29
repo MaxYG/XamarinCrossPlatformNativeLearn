@@ -3,5 +3,7 @@
   <PropertyGroup>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
     <SelectedDevice> 5.7" Marshmallow %286.0.0%29 XHDPI Phone</SelectedDevice>
+    <DefaultDevice>VisualStudio_android-23_x86_phone</DefaultDevice>
+    <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
 </Project>
