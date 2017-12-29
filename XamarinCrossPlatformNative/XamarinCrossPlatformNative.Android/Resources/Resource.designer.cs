@@ -1882,6 +1882,15 @@ namespace XamarinCrossPlatformNative.Droid
 			// aapt resource value: 0x7f0a0062
 			public const int media_actions = 2131361890;
 			
+			// aapt resource value: 0x7f0a0073
+			public const int menu_edit = 2131361907;
+			
+			// aapt resource value: 0x7f0a0075
+			public const int menu_preferences = 2131361909;
+			
+			// aapt resource value: 0x7f0a0074
+			public const int menu_save = 2131361908;
+			
 			// aapt resource value: 0x7f0a001c
 			public const int middle = 2131361820;
 			
@@ -2250,6 +2259,22 @@ namespace XamarinCrossPlatformNative.Droid
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f0c0000
+			public const int top_menus = 2131492864;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
 			{
 			}
 		}
