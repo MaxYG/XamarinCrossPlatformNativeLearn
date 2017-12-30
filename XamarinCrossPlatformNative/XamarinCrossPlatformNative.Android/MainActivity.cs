@@ -11,10 +11,11 @@ using Android.Support.V7.App;
 using XamarinCrossPlatformNative.Droid.Adapter;
 using XamarinCrossPlatformNative.Droid.Model;
 using Android.Views;
+using XamarinCrossPlatformNative.Droid.Activities;
 
 namespace XamarinCrossPlatformNative.Droid
 {
-	[Activity (Label = "Android1",  Icon = "@drawable/icon")]
+	[Activity (Label = "Android1",Icon = "@drawable/icon")]
 	public class MainActivity : Activity
     {
 		
@@ -24,11 +25,22 @@ namespace XamarinCrossPlatformNative.Droid
 		{
 			base.OnCreate (bundle);
 		    SetContentView(Resource.Layout.Main);
+            
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetActionBar(toolbar);
 		    ActionBar.Title = "My Toolbar";
-            //SetTitle(1);
-			
+
+		    var editToolbar = FindViewById<Toolbar>(Resource.Id.edit_toolbar);
+		    editToolbar.Title = "Editing";
+            editToolbar.InflateMenu(Resource.Menu.edit_menus);
+		    editToolbar.MenuItemClick += (sender, e) => {
+		        Toast.MakeText(this, "Bottom toolbar tapped: " + e.Item.TitleFormatted, ToastLength.Short).Show();
+		    };
+
+		    FindViewById<Button>(Resource.Id.GoToDetailPage).Click += (sender, e) =>
+		    {
+		        StartActivity(typeof(DetailActivity));
+		    };
 
 		    /*listView = FindViewById<ListView>(Resource.Id.myListView);
 
@@ -46,8 +58,7 @@ namespace XamarinCrossPlatformNative.Droid
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            Toast.MakeText(this, "Action selected: " + item.TitleFormatted,
-                ToastLength.Short).Show();
+            Toast.MakeText(this, "Action selected: " + item.TitleFormatted,ToastLength.Short).Show();
             return base.OnOptionsItemSelected(item);
         }
     }
