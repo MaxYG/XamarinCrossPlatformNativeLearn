@@ -1,8 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <resources>
-  <!--splash screen theme-->
-  <style name="MyTheme.Base" parent="Theme.AppCompat.Light"></style>
+  <style name="MyTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowActionBar">false</item>
+  </style>
+
   <style name="MyTheme" parent="MyTheme.Base"></style>
+  
+  <!--splash screen theme-->
   <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
     <item name="android:windowBackground">@drawable/splash_screen</item>
     <item name="android:windowNoTitle">true</item>
@@ -10,10 +15,9 @@
   </style>
 
   <!--tool bar theme-->
-  <style name="MyToolBarTheme" parent="@android:style/Theme.Material.Light.DarkActionBar">
-    <item name="android:windowNoTitle">true</item>
-    <item name="android:windowActionBar">false</item>
+  <style name="MyTheme.ToolBar" parent="Theme.AppCompat.Light.DarkActionBar">
     <item name="android:colorPrimary">#5A8622</item>
     <item name="android:colorAccent">#C7A935</item>
   </style>
+  
 </resources>

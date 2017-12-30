@@ -2908,7 +2908,7 @@ namespace XamarinCrossPlatformNative.Droid
 			public const int MyTheme_Splash = 2131165535;
 			
 			// aapt resource value: 0x7f070160
-			public const int MyToolBarTheme = 2131165536;
+			public const int MyTheme_ToolBar = 2131165536;
 			
 			// aapt resource value: 0x7f07001e
 			public const int Platform_AppCompat = 2131165214;

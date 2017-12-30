@@ -15,8 +15,8 @@ using XamarinCrossPlatformNative.Droid.Activities;
 
 namespace XamarinCrossPlatformNative.Droid
 {
-	[Activity (Label = "Android1",Icon = "@drawable/icon")]
-	public class MainActivity : Activity
+	[Activity (Icon = "@drawable/icon")]
+	public class MainActivity : AppCompatActivity
     {
 		
         List<ColorItem> colorItems=new List<ColorItem>();
@@ -27,10 +27,10 @@ namespace XamarinCrossPlatformNative.Droid
 		    SetContentView(Resource.Layout.Main);
             
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-            SetActionBar(toolbar);
-		    ActionBar.Title = "My Toolbar";
+		    SetActionBar(toolbar);
+		    ActionBar.Title = "Main Page";
 
-		    var editToolbar = FindViewById<Toolbar>(Resource.Id.edit_toolbar);
+            var editToolbar = FindViewById<Toolbar>(Resource.Id.edit_toolbar);
 		    editToolbar.Title = "Editing";
             editToolbar.InflateMenu(Resource.Menu.edit_menus);
 		    editToolbar.MenuItemClick += (sender, e) => {

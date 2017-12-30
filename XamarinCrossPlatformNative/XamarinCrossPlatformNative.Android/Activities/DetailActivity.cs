@@ -14,7 +14,7 @@ using Android.Widget;
 namespace XamarinCrossPlatformNative.Droid.Activities
 {
     [Activity(Label = "DetailActivity")]
-    public class DetailActivity : Activity
+    public class DetailActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
