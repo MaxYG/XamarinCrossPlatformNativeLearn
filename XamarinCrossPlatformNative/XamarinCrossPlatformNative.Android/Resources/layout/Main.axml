@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+  <FrameLayout
+    android:id="@+id/fragmentContainer"
+    android:layout_width="match_parent"
+    android:layout_height="0dip"
+    android:layout_weight="1" />
+</LinearLayout>
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-   <!-- <include
+   ~1~ <include
         android:id="@+id/toolbar"
-        layout="@layout/toolbar" />-->
+        layout="@layout/toolbar" />@1@
+
     <Button
         android:id="@+id/GoToDetailPage"
         android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hello World, Click Me!" />
-   <!-- <LinearLayout
+   ~1~ <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -27,5 +39,5 @@
                android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"></Toolbar>
-    </LinearLayout>-->
-</RelativeLayout>
+    </LinearLayout>@1@
+</RelativeLayout>-->
