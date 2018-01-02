@@ -4,10 +4,10 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
   
-  <include
+  <!--<include
       android:id="@+id/toolbar"
-      layout="@layout/toolbar" />
-  <LinearLayout
+      layout="@layout/toolbar" />-->
+  <!--<LinearLayout
       android:orientation="vertical"
       android:layout_width="fill_parent"
       android:layout_height="fill_parent"
@@ -50,10 +50,6 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content" />
       </RadioGroup>
-      <!--<android.support.v7.widget.SwitchCompat
-          android:layout_width="fill_parent"
-          android:layout_height="wrap_content"
-          android:text="Switch" />-->
     </LinearLayout>
-  </LinearLayout>
+  </LinearLayout>-->
 </RelativeLayout>

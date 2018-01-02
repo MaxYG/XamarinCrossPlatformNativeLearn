@@ -26,7 +26,7 @@ namespace XamarinCrossPlatformNative.Droid
 			base.OnCreate (bundle);
 		    SetContentView(Resource.Layout.Main);
             
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            /*var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
 		    SetActionBar(toolbar);
 		    ActionBar.Title = "Main Page";
 
@@ -35,7 +35,7 @@ namespace XamarinCrossPlatformNative.Droid
             editToolbar.InflateMenu(Resource.Menu.edit_menus);
 		    editToolbar.MenuItemClick += (sender, e) => {
 		        Toast.MakeText(this, "Bottom toolbar tapped: " + e.Item.TitleFormatted, ToastLength.Short).Show();
-		    };
+		    };*/
 
 		    FindViewById<Button>(Resource.Id.GoToDetailPage).Click += (sender, e) =>
 		    {
