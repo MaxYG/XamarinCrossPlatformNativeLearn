@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="hello">Hello World, Click Me!</string>
-	<string name="app_name">XamarinCrossPlatformNative.Android</string>
+	<string name="app_name">XamarinAndroid</string>
+	<string name="toolbar_name">My toolbar name</string>
 </resources>
