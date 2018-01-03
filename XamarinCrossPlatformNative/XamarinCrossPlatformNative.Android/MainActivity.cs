@@ -15,22 +15,28 @@ using XamarinCrossPlatformNative.Droid.Activities;
 
 namespace XamarinCrossPlatformNative.Droid
 {
-	[Activity (Icon = "@drawable/icon")]
-	public class MainActivity : AppCompatActivity
+	[Activity (Icon = "@drawable/icon", MainLauncher = true)]
+	public class MainActivity : Activity
     {
 		
-        List<ColorItem> colorItems=new List<ColorItem>();
-	    private ListView listView;
+      /*  List<ColorItem> colorItems=new List<ColorItem>();
+	    private ListView listView;*/
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-		    SetContentView(Resource.Layout.Main);
-
+		    RequestWindowFeature(WindowFeatures.ActionBar);
+		    this.ActionBar.SetDisplayShowHomeEnabled(false);
+		    this.ActionBar.SetDisplayShowTitleEnabled(false);
 		    ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
-//		    this.ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
-            AddTab("Tab 1", Resource.Drawable.ic_tab_white, new SampleTabFragment());
+		    AddTab("Tab 1", Resource.Drawable.ic_tab_white, new SampleTabFragment());
 		    AddTab("Tab 2", Resource.Drawable.ic_tab_white, new SampleTabFragment2());
-
+		    if (bundle != null)
+		    {
+		        this.ActionBar.SelectTab(this.ActionBar.GetTabAt(bundle.GetInt("tab")));
+		    }
+            SetContentView(Resource.Layout.Main);
+		    
+		    
             /*var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
 		    SetActionBar(toolbar);
 		    ActionBar.Title = "Main Page";
@@ -47,13 +53,13 @@ namespace XamarinCrossPlatformNative.Droid
 		        StartActivity(typeof(DetailActivity));
 		    };*/
 
-		    /*listView = FindViewById<ListView>(Resource.Id.myListView);
+            /*listView = FindViewById<ListView>(Resource.Id.myListView);
 
             colorItems.Add(new ColorItem(){Color = Color.DarkRed,ColorName = "Dark red",Code = "8B0000"});
             colorItems.Add(new ColorItem(){Color = Color.SlateBlue,ColorName = "slate blue",Code = "6A5ACD"});
             colorItems.Add(new ColorItem(){Color = Color.ForestGreen,ColorName = "forest green",Code = "228B22"});
             listView.Adapter=new ColorAdapter(this,colorItems);*/
-		}
+        }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
