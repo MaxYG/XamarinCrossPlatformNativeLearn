@@ -21,4 +21,10 @@
     <item name="android:colorAccent">#C7A935</item>
   </style>
   
+  <!--action bar theme-->
+  <style name="MyTheme.ActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="android:colorPrimary">#5A8622</item>
+    <item name="android:colorAccent">#C7A935</item>
+  </style>
+  
 </resources>

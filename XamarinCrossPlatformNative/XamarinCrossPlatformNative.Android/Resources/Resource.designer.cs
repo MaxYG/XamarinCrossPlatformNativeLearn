@@ -1894,17 +1894,17 @@ namespace XamarinCrossPlatformNative.Droid
 			// aapt resource value: 0x7f0a0074
 			public const int menu_cut = 2131361908;
 			
-			// aapt resource value: 0x7f0a0077
-			public const int menu_edit = 2131361911;
+			// aapt resource value: 0x7f0a0078
+			public const int menu_edit = 2131361912;
 			
 			// aapt resource value: 0x7f0a0076
 			public const int menu_paste = 2131361910;
 			
-			// aapt resource value: 0x7f0a0079
-			public const int menu_preferences = 2131361913;
+			// aapt resource value: 0x7f0a007a
+			public const int menu_preferences = 2131361914;
 			
-			// aapt resource value: 0x7f0a0078
-			public const int menu_save = 2131361912;
+			// aapt resource value: 0x7f0a0079
+			public const int menu_save = 2131361913;
 			
 			// aapt resource value: 0x7f0a001c
 			public const int middle = 2131361820;
@@ -1995,6 +1995,9 @@ namespace XamarinCrossPlatformNative.Droid
 			
 			// aapt resource value: 0x7f0a0055
 			public const int select_dialog_listview = 2131361877;
+			
+			// aapt resource value: 0x7f0a0077
+			public const int shareMenuItem = 2131361911;
 			
 			// aapt resource value: 0x7f0a003f
 			public const int shortcut = 2131361855;
@@ -2291,10 +2294,13 @@ namespace XamarinCrossPlatformNative.Droid
 		{
 			
 			// aapt resource value: 0x7f0c0000
-			public const int edit_menus = 2131492864;
+			public const int EditMenus = 2131492864;
 			
 			// aapt resource value: 0x7f0c0001
-			public const int top_menus = 2131492865;
+			public const int shareactionbarmenu = 2131492865;
+			
+			// aapt resource value: 0x7f0c0002
+			public const int TopMenus = 2131492866;
 			
 			static Menu()
 			{
@@ -2410,6 +2416,9 @@ namespace XamarinCrossPlatformNative.Droid
 			
 			// aapt resource value: 0x7f050013
 			public const int search_menu_title = 2131034131;
+			
+			// aapt resource value: 0x7f050024
+			public const int sharePicture = 2131034148;
 			
 			// aapt resource value: 0x7f050014
 			public const int status_bar_notification_info_overflow = 2131034132;
@@ -2900,6 +2909,9 @@ namespace XamarinCrossPlatformNative.Droid
 			
 			// aapt resource value: 0x7f07015e
 			public const int MyTheme = 2131165534;
+			
+			// aapt resource value: 0x7f070161
+			public const int MyTheme_ActionBar = 2131165537;
 			
 			// aapt resource value: 0x7f07015d
 			public const int MyTheme_Base = 2131165533;

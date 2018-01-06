@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using Android.App;
 using Android.Content;
-using Android.Graphics;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
@@ -12,6 +12,7 @@ using XamarinCrossPlatformNative.Droid.Adapter;
 using XamarinCrossPlatformNative.Droid.Model;
 using Android.Views;
 using XamarinCrossPlatformNative.Droid.Activities;
+using Path = Android.Graphics.Path;
 
 namespace XamarinCrossPlatformNative.Droid
 {
@@ -24,9 +25,11 @@ namespace XamarinCrossPlatformNative.Droid
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-		    RequestWindowFeature(WindowFeatures.ActionBar);
+
+            //tab start
+            RequestWindowFeature(WindowFeatures.ActionBar);
 		    this.ActionBar.SetDisplayShowHomeEnabled(false);
-		    this.ActionBar.SetDisplayShowTitleEnabled(false);
+		    this.ActionBar.SetDisplayShowTitleEnabled(true);
 		    ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
 		    AddTab("Tab 1", Resource.Drawable.ic_tab_white, new SampleTabFragment());
 		    AddTab("Tab 2", Resource.Drawable.ic_tab_white, new SampleTabFragment2());
@@ -34,6 +37,9 @@ namespace XamarinCrossPlatformNative.Droid
 		    {
 		        this.ActionBar.SelectTab(this.ActionBar.GetTabAt(bundle.GetInt("tab")));
 		    }
+		    //tab end
+
+		    CopyToPublic("monkey.png");
             SetContentView(Resource.Layout.Main);
 		    
 		    
@@ -63,8 +69,20 @@ namespace XamarinCrossPlatformNative.Droid
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
-            MenuInflater.Inflate(Resource.Menu.top_menus,menu);
-            return base.OnCreateOptionsMenu(menu);
+            MenuInflater.Inflate(Resource.Menu.TopMenus,menu);
+            var shareMenuItem = menu.FindItem(Resource.Id.shareMenuItem);
+            var shareActionProvider =(ShareActionProvider) shareMenuItem.ActionProvider;
+            shareActionProvider.SetShareIntent(CreateIntent());
+            return true;
+        }
+
+        public Intent CreateIntent()
+        {
+            var sendPictureIntent=new Intent(Intent.ActionSend);
+            sendPictureIntent.SetType("image/*");
+            var uri = Android.Net.Uri.FromFile(GetFileStreamPath("monkey.png"));
+            sendPictureIntent.PutExtra(Intent.ExtraStream, uri);
+            return sendPictureIntent;
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
@@ -104,6 +122,29 @@ namespace XamarinCrossPlatformNative.Droid
             this.ActionBar.AddTab(tab);
         }
 
+        public void CopyToPublic(String fileName)
+        {
+            using (Stream fromStream = Assets.Open(fileName))
+            {
+
+                string filePath = System.IO.Path.Combine(new string[] { "data", "data", PackageName, "files", fileName });
+
+                int size = 32 * 1024;
+
+                using (FileStream toStream = new FileStream(filePath, FileMode.Create, FileAccess.ReadWrite))
+                {
+
+                    int n = -1;
+                    byte[] buffer = new byte[size];
+
+                    while ((n = fromStream.Read(buffer, 0, size)) > 0)
+                    {
+                        toStream.Write(buffer, 0, n);
+                    }
+                }
+            }
+        }
+
         class SampleTabFragment : Fragment
         {
             public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -131,6 +172,8 @@ namespace XamarinCrossPlatformNative.Droid
                 return view;
             }
         }
+
+
     }
 }
 
