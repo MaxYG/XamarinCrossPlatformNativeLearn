@@ -1,52 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent">
-  
-  <FrameLayout android:id="@+id/fragmentContainer"
-               android:layout_width="match_parent"
-               android:layout_height="0dip"
-               android:layout_weight="1" />
-</LinearLayout>
-<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent">
-  <FrameLayout android:id="@+id/fragmentContainer"
-               android:layout_width="match_parent"
-               android:layout_height="0dip"
-               android:layout_weight="1" />
-</LinearLayout>-->
-
-<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-   ~1~ <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar" />@1@
-
-    <Button
-        android:id="@+id/GoToDetailPage"
-        android:layout_below="@+id/toolbar"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<!--<FrameLayout
+        android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello World, Click Me!" />
-   ~1~ <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@id/toolbar"
-        android:id="@+id/main_content">
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-      <Toolbar android:id="@+id/edit_toolbar"
-               android:minHeight="?android:attr/actionBarSize"
-               android:background="?android:attr/colorAccent"
-               android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"></Toolbar>
-    </LinearLayout>@1@
-</RelativeLayout>-->
+        android:layout_height="0dip"
+        android:layout_weight="1" />-->
+</LinearLayout>

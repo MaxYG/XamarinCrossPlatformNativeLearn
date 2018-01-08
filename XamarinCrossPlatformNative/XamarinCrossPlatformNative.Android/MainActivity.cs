@@ -16,8 +16,8 @@ using Path = Android.Graphics.Path;
 
 namespace XamarinCrossPlatformNative.Droid
 {
-	[Activity (Icon = "@drawable/icon", MainLauncher = true)]
-	public class MainActivity : Activity
+	[Activity (Icon = "@drawable/icon", MainLauncher = false)]
+	public class MainActivity : AppCompatActivity
     {
 		
       /*  List<ColorItem> colorItems=new List<ColorItem>();
@@ -27,19 +27,19 @@ namespace XamarinCrossPlatformNative.Droid
 			base.OnCreate (bundle);
 
             //tab start
-            RequestWindowFeature(WindowFeatures.ActionBar);
+            /*RequestWindowFeature(WindowFeatures.ActionBar);
 		    this.ActionBar.SetDisplayShowHomeEnabled(false);
-		    this.ActionBar.SetDisplayShowTitleEnabled(true);
+		    this.ActionBar.SetDisplayShowTitleEnabled(false);
 		    ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
 		    AddTab("Tab 1", Resource.Drawable.ic_tab_white, new SampleTabFragment());
 		    AddTab("Tab 2", Resource.Drawable.ic_tab_white, new SampleTabFragment2());
 		    if (bundle != null)
 		    {
 		        this.ActionBar.SelectTab(this.ActionBar.GetTabAt(bundle.GetInt("tab")));
-		    }
+		    }*/
 		    //tab end
 
-		    CopyToPublic("monkey.png");
+//		    CopyToPublic("monkey.png");
             SetContentView(Resource.Layout.Main);
 		    
 		    
@@ -70,9 +70,9 @@ namespace XamarinCrossPlatformNative.Droid
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             MenuInflater.Inflate(Resource.Menu.TopMenus,menu);
-            var shareMenuItem = menu.FindItem(Resource.Id.shareMenuItem);
-            var shareActionProvider =(ShareActionProvider) shareMenuItem.ActionProvider;
-            shareActionProvider.SetShareIntent(CreateIntent());
+//            var shareMenuItem = menu.FindItem(Resource.Id.shareMenuItem);
+//            var shareActionProvider =(ShareActionProvider) shareMenuItem.ActionProvider;
+//            shareActionProvider.SetShareIntent(CreateIntent());
             return true;
         }
 
@@ -98,7 +98,7 @@ namespace XamarinCrossPlatformNative.Droid
             base.OnSaveInstanceState(outState);
         }
 
-        private void AddTab(string tabText,int iconResourceId,Fragment view)
+        /*private void AddTab(string tabText,int iconResourceId,Fragment view)
         {
             var tab = this.ActionBar.NewTab();
             tab.SetText(tabText);
@@ -120,7 +120,7 @@ namespace XamarinCrossPlatformNative.Droid
             };
 
             this.ActionBar.AddTab(tab);
-        }
+        }*/
 
         public void CopyToPublic(String fileName)
         {

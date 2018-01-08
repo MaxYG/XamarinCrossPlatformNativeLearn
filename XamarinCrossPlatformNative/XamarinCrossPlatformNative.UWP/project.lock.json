@@ -22265,38 +22265,43 @@
     "UAP,Version=v10.0.10586": []
   },
   "packageFolders": {
-    "C:\\Users\\yg\\.nuget\\packages\\": {}
+    "C:\\Users\\shinetech-yg\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "D:\\study\\XamarinDemo\\XCPNLearn\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative.UWP\\XCPN.UWP.csproj",
+      "projectUniqueName": "F:\\study\\XamrinDemo\\XCPN\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative.UWP\\XCPN.UWP.csproj",
       "projectName": "XCPN.UWP",
-      "projectPath": "D:\\study\\XamarinDemo\\XCPNLearn\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative.UWP\\XCPN.UWP.csproj",
-      "projectJsonPath": "D:\\study\\XamarinDemo\\XCPNLearn\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative.UWP\\project.json",
-      "packagesPath": "C:\\Users\\yg\\.nuget\\packages\\",
-      "outputPath": "D:\\study\\XamarinDemo\\XCPNLearn\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative.UWP\\obj\\",
+      "projectPath": "F:\\study\\XamrinDemo\\XCPN\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative.UWP\\XCPN.UWP.csproj",
+      "projectJsonPath": "F:\\study\\XamrinDemo\\XCPN\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative.UWP\\project.json",
+      "packagesPath": "C:\\Users\\shinetech-yg\\.nuget\\packages\\",
+      "outputPath": "F:\\study\\XamrinDemo\\XCPN\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative.UWP\\obj\\",
       "projectStyle": "ProjectJson",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\yg\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\shinetech-yg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://nuget.episerver.com/feed/packages.svc/": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "uap10.0.10586": {
           "projectReferences": {
-            "D:\\study\\XamarinDemo\\XCPNLearn\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative\\XCPN.csproj": {
-              "projectPath": "D:\\study\\XamarinDemo\\XCPNLearn\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative\\XCPN.csproj"
+            "F:\\study\\XamrinDemo\\XCPN\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative\\XCPN.csproj": {
+              "projectPath": "F:\\study\\XamrinDemo\\XCPN\\XamarinCrossPlatformNative\\XamarinCrossPlatformNative\\XCPN.csproj"
             }
           }
         }
       }
     },
     "dependencies": {
-      "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
-      "Xamarin.Forms": "2.3.3.193"
+      "Microsoft.NETCore.UniversalWindowsPlatform": "[5.2.2, )",
+      "Xamarin.Forms": "[2.3.3.193, )"
     },
     "frameworks": {
       "uap10.0.10586": {}

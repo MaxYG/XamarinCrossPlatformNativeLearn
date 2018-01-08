@@ -1,30 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <resources>
-  <style name="MyTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
-    <!--parent="Theme.AppCompat.Light.NoActionBar"-->
-    <item name="android:windowNoTitle">false</item>
-  </style>
-
   <style name="MyTheme" parent="MyTheme.Base"></style>
+    
+  <style name="MyTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+<!--    <item name="android:windowBackground">#FFFFFF</item>-->
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:colorPrimary">#7092be</item>
+    <item name="android:statusBarColor">#7092be</item>
+  </style>
   
   <!--splash screen theme-->
   <style name="MyTheme.Splash">
     <item name="android:windowBackground">@drawable/splash_screen</item>
     <item name="android:windowNoTitle">true</item>
     <item name="android:windowFullscreen">true</item>
-<!--    <item name="android:windowActionBar">false</item>-->
+    <item name="android:windowActionBar">false</item>
   </style>
 
   <!--tool bar theme-->
-  <style name="MyTheme.ToolBar" parent="Theme.AppCompat.Light.DarkActionBar">
+  <!--<style name="MyTheme.ToolBar" parent="Theme.AppCompat.Light.DarkActionBar">
     <item name="android:colorPrimary">#5A8622</item>
     <item name="android:colorAccent">#C7A935</item>
-  </style>
+  </style>-->
   
   <!--action bar theme-->
-  <style name="MyTheme.ActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+  <!--<style name="MyTheme.ActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
     <item name="android:colorPrimary">#5A8622</item>
     <item name="android:colorAccent">#C7A935</item>
-  </style>
+  </style>-->
   
 </resources>
