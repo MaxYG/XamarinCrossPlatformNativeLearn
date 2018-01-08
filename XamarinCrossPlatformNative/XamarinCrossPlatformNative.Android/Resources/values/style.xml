@@ -7,6 +7,7 @@
     <item name="android:windowNoTitle">true</item>
     <item name="android:colorPrimary">#7092be</item>
     <item name="android:statusBarColor">#7092be</item>
+    <item name="android:windowActionBar">false</item>
   </style>
   
   <!--splash screen theme-->

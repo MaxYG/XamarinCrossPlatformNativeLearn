@@ -16,7 +16,7 @@ using Path = Android.Graphics.Path;
 
 namespace XamarinCrossPlatformNative.Droid
 {
-	[Activity (Icon = "@drawable/icon", MainLauncher = false)]
+	[Activity (Icon = "@drawable/icon", MainLauncher = true)]
 	public class MainActivity : AppCompatActivity
     {
 		

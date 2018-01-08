@@ -7,7 +7,7 @@ using Android.Util;
 
 namespace XamarinCrossPlatformNative.Droid
 {
-    [Activity(Theme = "@style/MyTheme.Splash",MainLauncher = true,NoHistory = true)]
+    [Activity(Theme = "@style/MyTheme.Splash",MainLauncher = false,NoHistory = true)]
     public class SplashActivity : AppCompatActivity
     {
         private static readonly string Tag = "X:" + typeof(SplashActivity).Name;
