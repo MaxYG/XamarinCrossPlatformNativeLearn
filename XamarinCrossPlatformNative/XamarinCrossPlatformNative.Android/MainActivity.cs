@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using Android.App;
 using Android.Content;
@@ -16,15 +17,21 @@ using Path = Android.Graphics.Path;
 
 namespace XamarinCrossPlatformNative.Droid
 {
-	[Activity (Icon = "@drawable/icon", MainLauncher = true)]
+	[Activity ( MainLauncher = false)]
 	public class MainActivity : AppCompatActivity
     {
 		
-      /*  List<ColorItem> colorItems=new List<ColorItem>();
-	    private ListView listView;*/
+        List<ColorItem> colorItems=new List<ColorItem>();
+	    private ListView listView;
 		protected override void OnCreate (Bundle bundle)
 		{
+
 			base.OnCreate (bundle);
+            
+
+		 /*
+		    SupportActionBar.setDisplayUseLogoEnabled(true);
+		    SupportActionBar.setDisplayShowHomeEnabled(true);*/
 
             //tab start
             /*RequestWindowFeature(WindowFeatures.ActionBar);
@@ -37,9 +44,9 @@ namespace XamarinCrossPlatformNative.Droid
 		    {
 		        this.ActionBar.SelectTab(this.ActionBar.GetTabAt(bundle.GetInt("tab")));
 		    }*/
-		    //tab end
+            //tab end
 
-//		    CopyToPublic("monkey.png");
+            //		    CopyToPublic("monkey.png");
             SetContentView(Resource.Layout.Main);
 		    
 		    
@@ -59,12 +66,11 @@ namespace XamarinCrossPlatformNative.Droid
 		        StartActivity(typeof(DetailActivity));
 		    };*/
 
-            /*listView = FindViewById<ListView>(Resource.Id.myListView);
-
-            colorItems.Add(new ColorItem(){Color = Color.DarkRed,ColorName = "Dark red",Code = "8B0000"});
-            colorItems.Add(new ColorItem(){Color = Color.SlateBlue,ColorName = "slate blue",Code = "6A5ACD"});
-            colorItems.Add(new ColorItem(){Color = Color.ForestGreen,ColorName = "forest green",Code = "228B22"});
-            listView.Adapter=new ColorAdapter(this,colorItems);*/
+            listView = FindViewById<ListView>(Resource.Id.myListView);
+            colorItems.Add(new ColorItem(){Color = Android.Graphics.Color.DarkRed,ColorName = "Dark red",Code = "8B0000"});
+            colorItems.Add(new ColorItem(){Color = Android.Graphics.Color.SlateBlue,ColorName = "slate blue",Code = "6A5ACD"});
+            colorItems.Add(new ColorItem(){Color = Android.Graphics.Color.ForestGreen,ColorName = "forest green",Code = "228B22"});
+            listView.Adapter=new ColorAdapter(this,colorItems);
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

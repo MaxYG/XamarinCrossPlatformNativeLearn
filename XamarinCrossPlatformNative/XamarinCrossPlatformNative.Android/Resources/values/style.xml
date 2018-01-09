@@ -3,11 +3,7 @@
   <style name="MyTheme" parent="MyTheme.Base"></style>
     
   <style name="MyTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
-<!--    <item name="android:windowBackground">#FFFFFF</item>-->
-    <item name="android:windowNoTitle">true</item>
-    <item name="android:colorPrimary">#7092be</item>
-    <item name="android:statusBarColor">#7092be</item>
-    <item name="android:windowActionBar">false</item>
+    <item name="colorPrimary">#38393d</item>
   </style>
   
   <!--splash screen theme-->
