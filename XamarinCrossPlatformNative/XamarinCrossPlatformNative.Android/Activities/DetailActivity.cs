@@ -21,12 +21,12 @@ namespace XamarinCrossPlatformNative.Droid.Activities
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Detail);
 
-            var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            /*var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetActionBar(toolbar);
             toolbar.Title = "hello from toolbar";
 
             ActionBar.SetDisplayHomeAsUpEnabled(true);
-            ActionBar.SetHomeButtonEnabled(true);
+            ActionBar.SetHomeButtonEnabled(true);*/
 
         }
 

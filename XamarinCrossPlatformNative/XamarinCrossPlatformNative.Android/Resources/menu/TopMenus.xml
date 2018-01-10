@@ -1,17 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:xcpnapp="http://schemas.android.com/apk/res-auto">
+
+ 
   <item
     android:id="@+id/menu_edit"
     android:icon="@drawable/ic_action_content_create"
-    android:showAsAction="ifRoom"
+    xcpnapp:showAsAction="always"
     android:title="Edit" />
   <item
     android:id="@+id/menu_save"
     android:icon="@drawable/ic_action_content_save"
     android:showAsAction="ifRoom"
     android:title="Save" />
+  <item android:id="@+id/shareMenuItem"
+        android:showAsAction="never"
+        android:title="@string/sharePicture"
+        android:actionProviderClass="android.widget.ShareActionProvider" />
   <item
     android:id="@+id/menu_preferences"
     android:showAsAction="never"
     android:title="Preferences" />
+  
 </menu>
