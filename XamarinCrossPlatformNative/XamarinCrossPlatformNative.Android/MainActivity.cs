@@ -9,6 +9,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Android.Support.V7.App;
+using Android.Support.V7.Widget;
 using XamarinCrossPlatformNative.Droid.Adapter;
 using XamarinCrossPlatformNative.Droid.Model;
 using Android.Views;
@@ -21,56 +22,69 @@ namespace XamarinCrossPlatformNative.Droid
 	public class MainActivity : AppCompatActivity
     {
 		
-        List<ColorItem> colorItems=new List<ColorItem>();
-	    private ListView listView;
+       /* List<ColorItem> colorItems=new List<ColorItem>();
+	    private ListView listView;*/
+
+        private RecyclerView mRecyclerView;
+        private RecyclerView.LayoutManager mLayoutManager;
+        private PhotoAlbumAdapter mAdapter;
+        private PhotoAlbum mPhotoAlbum;
 		protected override void OnCreate (Bundle bundle)
 		{
 
 			base.OnCreate (bundle);
             
+            mPhotoAlbum=new PhotoAlbum();
+            mAdapter=new PhotoAlbumAdapter(mPhotoAlbum);
+            SetContentView(Resource.Layout.Main);
+		    mRecyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView);
+//            mRecyclerView.SetAdapter(mAdapter);
 
-		 /*
-		    SupportActionBar.setDisplayUseLogoEnabled(true);
-		    SupportActionBar.setDisplayShowHomeEnabled(true);*/
+		    mLayoutManager = new LinearLayoutManager(this);
+		    mRecyclerView.SetLayoutManager(mLayoutManager);
+
+
+            /*
+               SupportActionBar.setDisplayUseLogoEnabled(true);
+               SupportActionBar.setDisplayShowHomeEnabled(true);*/
 
             //tab start
             /*RequestWindowFeature(WindowFeatures.ActionBar);
-		    this.ActionBar.SetDisplayShowHomeEnabled(false);
-		    this.ActionBar.SetDisplayShowTitleEnabled(false);
-		    ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
-		    AddTab("Tab 1", Resource.Drawable.ic_tab_white, new SampleTabFragment());
-		    AddTab("Tab 2", Resource.Drawable.ic_tab_white, new SampleTabFragment2());
-		    if (bundle != null)
-		    {
-		        this.ActionBar.SelectTab(this.ActionBar.GetTabAt(bundle.GetInt("tab")));
-		    }*/
-            //tab end
+            this.ActionBar.SetDisplayShowHomeEnabled(false);
+            this.ActionBar.SetDisplayShowTitleEnabled(false);
+            ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
+            AddTab("Tab 1", Resource.Drawable.ic_tab_white, new SampleTabFragment());
+            AddTab("Tab 2", Resource.Drawable.ic_tab_white, new SampleTabFragment2());
+            if (bundle != null)
+            {
+                this.ActionBar.SelectTab(this.ActionBar.GetTabAt(bundle.GetInt("tab")));
+            }*/
+
 
             //		    CopyToPublic("monkey.png");
-            SetContentView(Resource.Layout.Main);
-		    
-		    
+            //tab end
+
             /*var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-		    SetActionBar(toolbar);
-		    ActionBar.Title = "Main Page";
+            SetActionBar(toolbar);
+            ActionBar.Title = "Main Page";
 
             var editToolbar = FindViewById<Toolbar>(Resource.Id.edit_toolbar);
-		    editToolbar.Title = "Editing";
+            editToolbar.Title = "Editing";
             editToolbar.InflateMenu(Resource.Menu.edit_menus);
-		    editToolbar.MenuItemClick += (sender, e) => {
-		        Toast.MakeText(this, "Bottom toolbar tapped: " + e.Item.TitleFormatted, ToastLength.Short).Show();
-		    };
+            editToolbar.MenuItemClick += (sender, e) => {
+                Toast.MakeText(this, "Bottom toolbar tapped: " + e.Item.TitleFormatted, ToastLength.Short).Show();
+            };
 
             FindViewById<Button>(Resource.Id.GoToDetailPage).Click += (sender, e) =>
-		    {
-		        StartActivity(typeof(DetailActivity));
-		    };*/
+            {
+                StartActivity(typeof(DetailActivity));
+            };*/
 
-            listView = FindViewById<ListView>(Resource.Id.myListView);
+            /*listView = FindViewById<ListView>(Resource.Id.myListView);
             colorItems.Add(new ColorItem(){Color = Android.Graphics.Color.DarkRed,ColorName = "Dark red",Code = "8B0000"});
             colorItems.Add(new ColorItem(){Color = Android.Graphics.Color.SlateBlue,ColorName = "slate blue",Code = "6A5ACD"});
             colorItems.Add(new ColorItem(){Color = Android.Graphics.Color.ForestGreen,ColorName = "forest green",Code = "228B22"});
-            listView.Adapter=new ColorAdapter(this,colorItems);
+            listView.Adapter=new ColorAdapter(this,colorItems);*/
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
