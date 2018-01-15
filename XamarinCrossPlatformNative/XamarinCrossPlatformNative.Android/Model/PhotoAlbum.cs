@@ -48,7 +48,7 @@ namespace XamarinCrossPlatformNative.Droid.Model
         public int RandomSwap()
         {
             Photo tempPhoto = mBuiltInPhotos[0];
-            int random = mRandom.Next();
+            int random = mRandom.Next(0, mPhotos.Length-1);
             mPhotos[0] = mPhotos[random];
             mPhotos[random] = tempPhoto;
 

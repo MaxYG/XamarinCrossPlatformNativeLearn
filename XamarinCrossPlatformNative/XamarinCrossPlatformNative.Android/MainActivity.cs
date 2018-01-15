@@ -41,14 +41,26 @@ namespace XamarinCrossPlatformNative.Droid
 		    mLayoutManager = new LinearLayoutManager(this);
 		    mRecyclerView.SetLayoutManager(mLayoutManager);
 		    mAdapter = new PhotoAlbumAdapter(mPhotoAlbum);
+		    mAdapter.ItemClick = OnItemClick;
 		    mRecyclerView.SetAdapter(mAdapter);
-            
-            /*
+
+		    Button randomPickButton = FindViewById<Button>(Resource.Id.randPickButton);
+		    randomPickButton.Click += delegate
+		    {
+		        if (mPhotoAlbum!=null)
+		        {
+		            int randomIndex = mPhotoAlbum.RandomSwap();
+                    mAdapter.NotifyItemChanged(0);
+                    mAdapter.NotifyItemChanged(randomIndex);
+		        }
+		    };
+
+		    /*
                SupportActionBar.setDisplayUseLogoEnabled(true);
                SupportActionBar.setDisplayShowHomeEnabled(true);*/
 
-            //tab start
-            /*RequestWindowFeature(WindowFeatures.ActionBar);
+		    //tab start
+		    /*RequestWindowFeature(WindowFeatures.ActionBar);
             this.ActionBar.SetDisplayShowHomeEnabled(false);
             this.ActionBar.SetDisplayShowTitleEnabled(false);
             ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
@@ -60,10 +72,10 @@ namespace XamarinCrossPlatformNative.Droid
             }*/
 
 
-            //		    CopyToPublic("monkey.png");
-            //tab end
+		    //		    CopyToPublic("monkey.png");
+		    //tab end
 
-            /*var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+		    /*var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetActionBar(toolbar);
             ActionBar.Title = "Main Page";
 
@@ -79,11 +91,16 @@ namespace XamarinCrossPlatformNative.Droid
                 StartActivity(typeof(DetailActivity));
             };*/
 
-            /*listView = FindViewById<ListView>(Resource.Id.myListView);
+		    /*listView = FindViewById<ListView>(Resource.Id.myListView);
             colorItems.Add(new ColorItem(){Color = Android.Graphics.Color.DarkRed,ColorName = "Dark red",Code = "8B0000"});
             colorItems.Add(new ColorItem(){Color = Android.Graphics.Color.SlateBlue,ColorName = "slate blue",Code = "6A5ACD"});
             colorItems.Add(new ColorItem(){Color = Android.Graphics.Color.ForestGreen,ColorName = "forest green",Code = "228B22"});
             listView.Adapter=new ColorAdapter(this,colorItems);*/
+		}
+
+        private void OnItemClick(object sender, int position)
+        {
+            Toast.MakeText(this, "click at position:" + (position+1),ToastLength.Short).Show();
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -117,7 +134,7 @@ namespace XamarinCrossPlatformNative.Droid
             base.OnSaveInstanceState(outState);
         }
 
-        
+       
 
         /*private void AddTab(string tabText,int iconResourceId,Fragment view)
         {
