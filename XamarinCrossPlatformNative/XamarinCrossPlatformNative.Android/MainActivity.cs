@@ -43,13 +43,24 @@ namespace XamarinCrossPlatformNative.Droid
 		    mAdapter = new PhotoAlbumAdapter(mPhotoAlbum);
 		    mAdapter.ItemClick = OnItemClick;
 		    mRecyclerView.SetAdapter(mAdapter);
-            
-            /*
+
+		    Button randomPickButton = FindViewById<Button>(Resource.Id.randPickButton);
+		    randomPickButton.Click += delegate
+		    {
+		        if (mPhotoAlbum!=null)
+		        {
+		            int randomIndex = mPhotoAlbum.RandomSwap();
+                    mAdapter.NotifyItemChanged(0);
+                    mAdapter.NotifyItemChanged(randomIndex);
+		        }
+		    };
+
+		    /*
                SupportActionBar.setDisplayUseLogoEnabled(true);
                SupportActionBar.setDisplayShowHomeEnabled(true);*/
 
-            //tab start
-            /*RequestWindowFeature(WindowFeatures.ActionBar);
+		    //tab start
+		    /*RequestWindowFeature(WindowFeatures.ActionBar);
             this.ActionBar.SetDisplayShowHomeEnabled(false);
             this.ActionBar.SetDisplayShowTitleEnabled(false);
             ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
@@ -61,10 +72,10 @@ namespace XamarinCrossPlatformNative.Droid
             }*/
 
 
-            //		    CopyToPublic("monkey.png");
-            //tab end
+		    //		    CopyToPublic("monkey.png");
+		    //tab end
 
-            /*var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+		    /*var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetActionBar(toolbar);
             ActionBar.Title = "Main Page";
 
@@ -80,12 +91,12 @@ namespace XamarinCrossPlatformNative.Droid
                 StartActivity(typeof(DetailActivity));
             };*/
 
-            /*listView = FindViewById<ListView>(Resource.Id.myListView);
+		    /*listView = FindViewById<ListView>(Resource.Id.myListView);
             colorItems.Add(new ColorItem(){Color = Android.Graphics.Color.DarkRed,ColorName = "Dark red",Code = "8B0000"});
             colorItems.Add(new ColorItem(){Color = Android.Graphics.Color.SlateBlue,ColorName = "slate blue",Code = "6A5ACD"});
             colorItems.Add(new ColorItem(){Color = Android.Graphics.Color.ForestGreen,ColorName = "forest green",Code = "228B22"});
             listView.Adapter=new ColorAdapter(this,colorItems);*/
-        }
+		}
 
         private void OnItemClick(object sender, int position)
         {
