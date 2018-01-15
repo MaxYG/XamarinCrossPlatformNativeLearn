@@ -14,6 +14,7 @@ using XamarinCrossPlatformNative.Droid.Adapter;
 using XamarinCrossPlatformNative.Droid.Model;
 using Android.Views;
 using XamarinCrossPlatformNative.Droid.Activities;
+using XamarinCrossPlatformNative.Droid.Tool;
 using Path = Android.Graphics.Path;
 
 namespace XamarinCrossPlatformNative.Droid
@@ -25,25 +26,23 @@ namespace XamarinCrossPlatformNative.Droid
        /* List<ColorItem> colorItems=new List<ColorItem>();
 	    private ListView listView;*/
 
-        private RecyclerView mRecyclerView;
-        private RecyclerView.LayoutManager mLayoutManager;
-        private PhotoAlbumAdapter mAdapter;
-        private PhotoAlbum mPhotoAlbum;
+        RecyclerView mRecyclerView;
+        RecyclerView.LayoutManager mLayoutManager;
+        PhotoAlbumAdapter mAdapter;
+        PhotoAlbum mPhotoAlbum;
 		protected override void OnCreate (Bundle bundle)
 		{
 
 			base.OnCreate (bundle);
             
             mPhotoAlbum=new PhotoAlbum();
-            mAdapter=new PhotoAlbumAdapter(mPhotoAlbum);
-            SetContentView(Resource.Layout.Main);
+		    SetContentView(Resource.Layout.Main);
 		    mRecyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView);
-//            mRecyclerView.SetAdapter(mAdapter);
-
 		    mLayoutManager = new LinearLayoutManager(this);
 		    mRecyclerView.SetLayoutManager(mLayoutManager);
-
-
+		    mAdapter = new PhotoAlbumAdapter(mPhotoAlbum);
+		    mRecyclerView.SetAdapter(mAdapter);
+            
             /*
                SupportActionBar.setDisplayUseLogoEnabled(true);
                SupportActionBar.setDisplayShowHomeEnabled(true);*/
@@ -118,6 +117,8 @@ namespace XamarinCrossPlatformNative.Droid
             base.OnSaveInstanceState(outState);
         }
 
+        
+
         /*private void AddTab(string tabText,int iconResourceId,Fragment view)
         {
             var tab = this.ActionBar.NewTab();
@@ -164,36 +165,6 @@ namespace XamarinCrossPlatformNative.Droid
                 }
             }
         }
-
-        class SampleTabFragment : Fragment
-        {
-            public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-            {
-                base.OnCreateView(inflater, container, savedInstanceState);
-
-                var view = inflater.Inflate(Resource.Layout.Tab, container, false);
-                var sampleTextView = view.FindViewById<TextView>(Resource.Id.sampleTextView);
-                sampleTextView.Text = "sample fragment text";
-
-                return view;
-            }
-        }
-
-        class SampleTabFragment2 : Fragment
-        {
-            public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-            {
-                base.OnCreateView(inflater, container, savedInstanceState);
-
-                var view = inflater.Inflate(Resource.Layout.Tab, container, false);
-                var sampleTextView = view.FindViewById<TextView>(Resource.Id.sampleTextView);
-                sampleTextView.Text = "sample fragment text 2";
-
-                return view;
-            }
-        }
-
-
     }
 }
 
