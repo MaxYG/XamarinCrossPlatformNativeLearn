@@ -4,6 +4,6 @@
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
     <SelectedDevice>HUAWEI H60-L11</SelectedDevice>
     <DefaultDevice>VisualStudio_android-23_x86_phone</DefaultDevice>
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
 </Project>
