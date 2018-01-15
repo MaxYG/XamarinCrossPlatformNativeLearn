@@ -15,10 +15,11 @@ namespace XamarinCrossPlatformNative.Droid.Tool
         public ImageView Image { get; private set; }
         public TextView Caption { get; private set; }
       
-        public PhotoViewHolder(View itemView) : base(itemView)
+        public PhotoViewHolder(View itemView,Action<int> action) : base(itemView)
         {
             Image = itemView.FindViewById<ImageView>(Resource.Id.imageView);
             Caption = itemView.FindViewById<TextView>(Resource.Id.textView);
+            itemView.Click += (ender, e) => action(base.LayoutPosition);
         }
     }
 }

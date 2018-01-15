@@ -18,6 +18,7 @@ namespace XamarinCrossPlatformNative.Droid.Adapter
     public class PhotoAlbumAdapter:RecyclerView.Adapter
     {
         private PhotoAlbum mPhotoAlbum;
+        public EventHandler<int> ItemClick;
 
         public PhotoAlbumAdapter(PhotoAlbum mPhotoAlbum)
         {
@@ -28,13 +29,22 @@ namespace XamarinCrossPlatformNative.Droid.Adapter
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
             View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.PhotoCardView, parent, false);
-            PhotoViewHolder photoViewHolder = new PhotoViewHolder(itemView);
+            PhotoViewHolder photoViewHolder = new PhotoViewHolder(itemView, OnClick);
             return photoViewHolder;
         }
 
         public override int ItemCount {
             get { return mPhotoAlbum.NumPhotos; }
         }
+
+        public void OnClick(int position)
+        {
+            if (ItemClick!=null)
+            {
+                ItemClick(this, position);
+            }
+        }
+
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
@@ -43,5 +53,6 @@ namespace XamarinCrossPlatformNative.Droid.Adapter
             photoViewHolder.Image.SetImageResource(mPhotoAlbum[position].PhotoID);
             photoViewHolder.Caption.Text = mPhotoAlbum[position].Caption;
         }
+        
     }
 }

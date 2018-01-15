@@ -41,6 +41,7 @@ namespace XamarinCrossPlatformNative.Droid
 		    mLayoutManager = new LinearLayoutManager(this);
 		    mRecyclerView.SetLayoutManager(mLayoutManager);
 		    mAdapter = new PhotoAlbumAdapter(mPhotoAlbum);
+		    mAdapter.ItemClick = OnItemClick;
 		    mRecyclerView.SetAdapter(mAdapter);
             
             /*
@@ -86,6 +87,11 @@ namespace XamarinCrossPlatformNative.Droid
             listView.Adapter=new ColorAdapter(this,colorItems);*/
         }
 
+        private void OnItemClick(object sender, int position)
+        {
+            Toast.MakeText(this, "click at position:" + (position+1),ToastLength.Short).Show();
+        }
+
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             MenuInflater.Inflate(Resource.Menu.TopMenus,menu);
@@ -117,7 +123,7 @@ namespace XamarinCrossPlatformNative.Droid
             base.OnSaveInstanceState(outState);
         }
 
-        
+       
 
         /*private void AddTab(string tabText,int iconResourceId,Fragment view)
         {
